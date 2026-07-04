@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abidjan Chamber of Commerce member directory - Find trusted partner businesses.">
+    <title>Directory - Abidjan Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Abidjan Chamber of Commerce</h1>
+        </div>
+        <button id="hamburger" class="hamburger" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+        <button class="join-btn" onclick="location.href='join.html'">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Business Directory</h2>
+        <p>Find trusted business partners and suppliers in our community.</p>
+    </section>
+
+    <main>
+        <!-- Directory Controls -->
+        <section id="directory">
+            <h2>Search the Directory</h2>
+
+            <div class="directory-controls">
+                <input type="text" id="search" class="search-box" placeholder="Search for a business...">
+                <select id="filter" class="filter-select">
+                    <option value="all">All categories</option>
+                </select>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">Grid</button>
+                    <button class="view-btn" data-view="list">List</button>
+                </div>
+            </div>
+
+            <!-- Members List -->
+            <div id="members-list" class="members-grid"></div>
+
+            <!-- Statistics -->
+            <div
+                style="margin-top: 2rem; padding: 2rem; background-color: var(--light-bg); border-radius: 8px; text-align: center;">
+                <h3>Directory Statistics</h3>
+                <div class="stats-container"
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                    <div>
+                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary-color);">10+</div>
+                        <div>Member Businesses</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary-color);">6</div>
+                        <div>Business Categories</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Box -->
+            <div
+                style="margin-top: 2rem; padding: 1.5rem; background-color: var(--light-bg); border-left: 4px solid var(--primary-color); border-radius: 8px;">
+                <h3>About the Directory</h3>
+                <p>This directory lists our affiliated members by business sector. You can search for specific
+                    companies or browse by category. Contact businesses directly to discuss commercial partnerships.</p>
+                <p><strong>Not a member yet?</strong> <a href="join.html"
+                        style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Join the Chamber
+                        of Commerce</a> to gain visibility in our directory.</p>
+            </div>
+
+            <!-- Featured Section -->
+            <div style="margin-top: 2rem;">
+                <h3>Main Categories</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Banks</h4>
+                        <p>Financial institutions and banking services.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Telecommunications</h4>
+                        <p>Mobile and internet services.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Transport</h4>
+                        <p>Logistics and road transportation.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Hospitality</h4>
+                        <p>Hotels and lodging providers.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Restaurants</h4>
+                        <p>Restaurants and food services.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Retail</h4>
+                        <p>Distribution and retail commerce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abidjan Chamber of Commerce. All rights reserved.</p>
+        <p><span>Contact</span>: +225 05 05 92 16 35</p>
+        <p><span>Email</span>: gueiyannick92@gmail.com </p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>

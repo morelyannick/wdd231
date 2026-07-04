@@ -1,0 +1,114 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "Orange Cote d'Ivoire",
+            "category": "Telecommunications",
+            "description": "Telecommunications and mobile data service provider",
+            "phone": "+225 07 07 07 07 07",
+            "email": "contact@orange.ci",
+            "website": "www.orange.ci",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/orange.png"
+        },
+        {
+            "id": 2,
+            "name": "MTN Cote d'Ivoire",
+            "category": "Telecommunications",
+            "description": "Leader in mobile and internet services in Ivory Coast",
+            "phone": "+225 01 00 10 10",
+            "email": "info@mtn.ci",
+            "website": "www.mtn.ci",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/mtn.png"
+        },
+        {
+            "id": 3,
+            "name": "Societe Generale Cote d'Ivoire",
+            "category": "Banks",
+            "description": "International banking and financial services",
+            "phone": "+225 20 21 75 75",
+            "email": "contact@sgbf.ci",
+            "website": "www.sgbf.ci",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/sg.png"
+        },
+        {
+            "id": 4,
+            "name": "NSIA Bank",
+            "category": "Banks",
+            "description": "Full-service commercial bank",
+            "phone": "+225 20 20 08 08",
+            "email": "contact@nsiabanque.ci",
+            "website": "www.nsiabanque.ci",
+            "address": "Cocody, Abidjan",
+            "image": "images/members/nsia.png"
+        },
+        {
+            "id": 5,
+            "name": "SOTRA",
+            "category": "Transport",
+            "description": "Abidjan road transport company",
+            "phone": "+225 21 24 51 51",
+            "email": "info@sotra-ci.com",
+            "website": "www.sotra-ci.com",
+            "address": "Autonomous Port, Abidjan",
+            "image": "images/members/sotra.png"
+        },
+        {
+            "id": 6,
+            "name": "Hotel Tiama",
+            "category": "Hospitality",
+            "description": "Four-star hotel with views of the Ebrie Lagoon",
+            "phone": "+225 27 20 24 75",
+            "email": "reservation@tiama.ci",
+            "website": "www.tiama-abidjan.ci",
+            "address": "Cocody, Abidjan",
+            "image": "images/members/tiama.png"
+        },
+        {
+            "id": 7,
+            "name": "Restaurant Le Plateau",
+            "category": "Restaurants",
+            "description": "Ivorian and international fine dining restaurant",
+            "phone": "+225 27 20 15 50",
+            "email": "info@leplateau.ci",
+            "website": "www.leplateau-restaurant.ci",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/leplateau.png"
+        },
+        {
+            "id": 8,
+            "name": "Carrefour Supermarket",
+            "category": "Retail",
+            "description": "Distribution chain and retail business",
+            "phone": "+225 27 21 28 28",
+            "email": "info@carrefour.ci",
+            "website": "www.carrefour.ci",
+            "address": "Marcory, Abidjan",
+            "image": "images/members/carrefour.png"
+        },
+        {
+            "id": 9,
+            "name": "EDS (Distribution Company)",
+            "category": "Retail",
+            "description": "Distribution of food and consumer products",
+            "phone": "+225 27 22 45 45",
+            "email": "contact@eds-ci.com",
+            "website": "www.eds-ci.com",
+            "address": "Abidjan",
+            "image": "images/members/eds.png"
+        },
+        {
+            "id": 10,
+            "name": "SIR (IT Services)",
+            "category": "Services",
+            "description": "IT solutions and consulting",
+            "phone": "+225 27 20 30 30",
+            "email": "info@sir-ci.com",
+            "website": "www.sir-ci.com",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/sir.png"
+        }
+    ]
+}

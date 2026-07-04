@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the Abidjan Chamber of Commerce - Membership plans and application form.">
+    <title>Join - Abidjan Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Abidjan Chamber of Commerce</h1>
+        </div>
+        <button id="hamburger" class="hamburger" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+        <button class="join-btn" onclick="location.href='join.html'">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Join the Chamber of Commerce</h2>
+        <p>Grow your professional network and access outstanding business opportunities.</p>
+    </section>
+
+    <main id="join">
+        <!-- Benefits Section -->
+        <section>
+            <h2>Membership Benefits</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="icon">1</div>
+                    <h4>Directory</h4>
+                    <p>Visibility in our online business directory.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">2</div>
+                    <h4>Training</h4>
+                    <p>Access to professional business training and workshops.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">3</div>
+                    <h4>Networking</h4>
+                    <p>Regular networking events with other members.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">4</div>
+                    <h4>Promotion</h4>
+                    <p>Promotion through our social media channels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Plans -->
+        <section>
+            <h2>Membership Plans</h2>
+            <p>Choose the plan that best fits your business needs.</p>
+            <div id="pricing-cards" class="pricing-cards"></div>
+
+            <!-- Benefits Comparison Table -->
+            <div style="margin-top: 3rem;">
+                <h3>Benefits Comparison Table</h3>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Benefits</th>
+                            <th>Non-Profit</th>
+                            <th>Silver</th>
+                            <th>Gold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Directory Listing</strong></td>
+                            <td>Yes</td>
+                            <td>Premium</td>
+                            <td>Premium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Business Training</strong></td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Networking Events</strong></td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>VIP</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom Advertising</strong></td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Social Media Posts</strong></td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Priority</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dedicated Support</strong></td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Business Sponsorship</strong></td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Membership Form -->
+        <section>
+            <h2>Membership Application Form</h2>
+            <p>Please fill out the form below to submit your application.</p>
+
+            <form id="join-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position/Title *</label>
+                        <input type="text" id="position" name="position" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="membership-level">Membership Plan *</label>
+                    <select id="membership-level" name="membership-level" required>
+                        <option value="">-- Select a plan --</option>
+                    </select>
+                    <p id="membership-description"
+                        style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--dark-text);"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-description">Company Description *</label>
+                    <textarea id="company-description" name="company-description"
+                        placeholder="Describe your company, its services or products, and your goals..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+
+                <p style="font-size: 0.85rem; color: var(--dark-text); margin-top: 1rem;">
+                    * Fields marked with an asterisk are required.
+                </p>
+            </form>
+
+            <!-- Additional Information -->
+            <div style="margin-top: 2rem; padding: 1.5rem; background-color: var(--light-bg); border-radius: 8px;">
+                <h3>Additional Information</h3>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Your application will be reviewed within 48 hours.</li>
+                    <li>You will receive an email confirmation with the next steps.</li>
+                    <li>Membership fees must be paid before your account is activated.</li>
+                    <li>Administrator access will be provided so you can manage your business profile.</li>
+                    <li>For questions, contact us at: membership@chambreabidjanci.com</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section
+            style="text-align: center; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; border-radius: 12px;">
+            <h2 style="color: white; border-bottom: none; margin-bottom: 1rem;">Need Help?</h2>
+            <p>Our team is ready to answer your membership questions.</p>
+            <p>Email: <a href="mailto:membership@chambreabidjanci.com"
+                    style="color: white; text-decoration: underline;">membership@chambreabidjanci.com</a></p>
+            <p>Phone: <a href="tel:+22520XXX" style="color: white; text-decoration: underline;">+225 20 XX XX XX</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abidjan Chamber of Commerce. All rights reserved.</p>
+        <p><span>Contact</span>: +225 05 05 92 16 35</p>
+        <p><span>Email</span>: gueiyannick92@gmail.com</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+
+</html>

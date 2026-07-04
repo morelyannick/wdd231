@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Abidjan Chamber of Commerce - Promoting businesses, supporting networking, and encouraging investment.">
+    <title>Abidjan Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body>
-    <h1>hello world</h1>
+    <header>
+        <div class="logo">
+            <h1>Abidjan Chamber of Commerce</h1>
+        </div>
+        <button id="hamburger" class="hamburger" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+        <button class="join-btn" onclick="location.href='join.html'">Join Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to the Abidjan Chamber of Commerce</h2>
+        <p>Promoting businesses, building networks, and supporting investment in Ivory Coast.</p>
+        <button class="cta-btn" onclick="location.href='discover.html'">Discover Abidjan</button>
+    </section>
+
+    <main>
+        <!-- Current Weather -->
+        <section>
+            <h2>Abidjan Weather</h2>
+            <div id="weather" class="weather-container"></div>
+        </section>
+
+        <!-- Business Spotlights -->
+        <section>
+            <h2>Featured Businesses</h2>
+            <div class="spotlights-container">
+                <div class="spotlight-card">
+                    <img src="images/orange.jpg" alt="Orange Cote d'Ivoire" data-src="images/orange.jpg">
+                    <h3>Orange Cote d'Ivoire</h3>
+                </div>
+                <div class="spotlight-card">
+                    <img src="images/mtn.jpg" alt="MTN Cote d'Ivoire" data-src="images/mtn.jpg">
+                    <h3>MTN Cote d'Ivoire</h3>
+                </div>
+                <div class="spotlight-card">
+                    <img src="images/sg.jpg" alt="Societe Generale" data-src="images/sg.jpg">
+                    <h3>Societe Generale</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Information -->
+        <section>
+            <h2>About Abidjan</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Population</h3>
+                    <p>More than 4 million residents in the economic capital of Ivory Coast.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Economy</h3>
+                    <p>A major economic center with diverse sectors including finance, trade, and services.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Strategic Importance</h3>
+                    <p>A major autonomous port, commercial crossroads, and logistics hub for the region.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section
+            style="text-align: center; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; border-radius: 12px;">
+            <h2 style="color: white; border-bottom: none; margin-bottom: 1rem;">Join the Chamber of Commerce</h2>
+            <p>Grow your network, access business opportunities, and participate in our professional training programs.
+            </p>
+            <button class="cta-btn"
+                style="background-color: var(--light-text); color: var(--secondary-color); margin-top: 1rem;"
+                onclick="location.href='join.html'">Join Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abidjan Chamber of Commerce. All rights reserved.</p>
+        <p><span>Contact</span>: +225 05 05 92 16 35</p>
+        <p><span>Email</span>: gueiyannick92@gmail.com</p>
+        <p><span>Guei tedy yannick</span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
+
 </html>

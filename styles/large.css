@@ -1,0 +1,392 @@
+/* ====================================
+   ABIDJAN CHAMBER OF COMMERCE
+   Large (Desktop) Styles
+   ==================================== */
+
+@media (min-width: 1200px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h1::after {
+        content: " 🏛️";
+    }
+
+    /* ====== NAVIGATION ====== */
+    nav ul li a {
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+        padding: 6rem 3rem;
+        min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 750px;
+    }
+
+    /* ====== MAIN CONTENT ====== */
+    main {
+        padding: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 3rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    section p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    /* ====== WEATHER SECTION ====== */
+    .weather-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weather-item {
+        padding: 2rem;
+    }
+
+    .weather-item .value {
+        font-size: 2.5rem;
+    }
+
+    /* ====== BUSINESS SPOTLIGHTS ====== */
+    .spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .spotlight-card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .spotlight-card img {
+        height: 250px;
+    }
+
+    .spotlight-card h3 {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    /* ====== COMMUNITY INFO ====== */
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .info-item {
+        padding: 1.5rem;
+        border-left-width: 6px;
+    }
+
+    .info-item h3 {
+        font-size: 1.2rem;
+    }
+
+    /* ====== DIRECTORY PAGE ====== */
+    .directory-controls {
+        gap: 1.5rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .member-card {
+        border-radius: 12px;
+        padding: 1.5rem;
+    }
+
+    /* ====== PRICING ====== */
+    .pricing-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .pricing-card {
+        padding: 2rem;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1.05);
+        border-color: var(--primary-color);
+        box-shadow: 0 8px 16px rgba(212, 165, 116, 0.2);
+    }
+
+    .pricing-card.featured::before {
+        content: "RECOMMENDED";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--accent-color);
+        color: var(--light-text);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-card .price {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-card ul {
+        list-style: none;
+        text-align: left;
+        margin: 1.5rem 0;
+    }
+
+    .pricing-card ul li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .pricing-card ul li::before {
+        content: "✓ ";
+        color: var(--success-color);
+        font-weight: 700;
+        margin-right: 0.5rem;
+    }
+
+    .pricing-card .cta-btn {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    /* ====== FORM ====== */
+    form {
+        max-width: 800px;
+    }
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row.triple {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 1.05rem;
+        padding: 0.85rem;
+    }
+
+    .submit-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    /* ====== GALLERY ====== */
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .gallery-item {
+        border-radius: 12px;
+        aspect-ratio: 1;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+    .footer-bottom {
+        grid-column: 1 / -1;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    /* ====== BREADCRUMB ====== */
+    .breadcrumb {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+    }
+
+    .breadcrumb a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb span {
+        color: var(--border-color);
+        margin: 0 0.25rem;
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    section {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* ====== CONTAINER ====== */
+    .container {
+        max-width: 1200px;
+    }
+
+    /* ====== ADVANCED LAYOUT ====== */
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .two-column.reverse {
+        direction: rtl;
+    }
+
+    .two-column.reverse>* {
+        direction: ltr;
+    }
+
+    /* ====== FEATURES GRID ====== */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .feature-item {
+        text-align: center;
+    }
+
+    .feature-item .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-item h4 {
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-item p {
+        font-size: 0.95rem;
+        color: var(--dark-text);
+    }
+
+    /* ====== STATISTICS ====== */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        color: var(--light-text);
+        padding: 3rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+
+/* ====== EXTRA LARGE SCREENS ====== */
+@media (min-width: 1800px) {
+    main {
+        max-width: 1400px;
+    }
+
+    .container {
+        max-width: 1400px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 4rem;
+    }
+
+    section {
+        padding: 4rem;
+    }
+
+    main {
+        padding: 4rem;
+    }
+}
