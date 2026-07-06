@@ -14,8 +14,11 @@
 
     /* ====== NAVIGATION ====== */
     nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         max-height: none;
-        background-color: grey;
+        background-color: var(--secondary-color);
         padding: 0;
     }
 
@@ -230,5 +233,36 @@
 
     .container {
         max-width: 900px;
+    }
+}
+@media (min-width: 768px) {
+    .course-logo h1 {
+        font-size: 1.6rem;
+    }
+
+    .course-main {
+        padding: 2rem;
+    }
+
+    .home-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+        align-items: stretch;
+    }
+
+    .about-card,
+    .photo-card {
+        min-height: 100%;
+    }
+
+    .section-heading-row {
+        grid-template-columns: 1fr auto;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-card {
+        align-content: space-between;
     }
 }
