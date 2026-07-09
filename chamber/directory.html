@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard Meta Content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory - Abidjan Chamber of Commerce</title>
+    <meta name="description" content="Discover registered businesses, services, and members of the Abidjan Chamber of Commerce directory. Support local commerce.">
+    <meta name="author" content="Guei Tedy Yannick">
+
+    <!-- Facebook Social Media Meta Settings -->
+    <meta property="og:title" content="Business Directory - Abidjan Chamber of Commerce">
+    <meta property="og:description" content="Explore local business members, silver partners, and gold sponsors driving Côte d'Ivoire's economy.">
+    <meta property="og:image" content="https://morelyannick.github.io/wdd231/images/abidjan01.jpg">
+    <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon01.ico">
+
+    <!-- Google Fonts for rich aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Linking Sequence (Normalize, then Small, then Large) -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+    <!-- Consistent Site Header -->
+    <header>
+        <div class="header-title-container">
+            <span class="profile-mark" aria-hidden="true" style="display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 8px; background-color: var(--secondary-color); color: var(--primary-color); font-weight: 800; font-size: 1.2rem; font-family: 'Outfit'; margin-right: 0.25rem;">ACC</span>
+            <div>
+                <h1>Abidjan Chamber</h1>
+                <p>Of Commerce & Industry</p>
+            </div>
+        </div>
+        <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Consistent Navigation -->
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <h2 class="page-title">Member Directory</h2>
+
+        <!-- Layout Controls -->
+        <div class="controls-container">
+            <p style="font-weight: 500; color: #4b5563;">Select view style:</p>
+            <div class="toggle-group">
+                <button id="grid-view-btn" class="active" aria-label="Switch to grid view">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Grid View
+                </button>
+                <button id="list-view-btn" aria-label="Switch to list view">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    List View
+                </button>
+            </div>
+        </div>
+
+        <!-- Directory Members list dynamically populated -->
+        <div id="members-container" class="members-container grid-view">
+            <!-- Populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Consistent Site Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Abidjan Chamber of Commerce</h3>
+                <p>📍 Plateau, Boulevard de la République, Abidjan</p>
+                <p>📞 Phone: +225 27 20 21 54 87</p>
+                <p>✉️ Email: info@abidjanchamber.ci</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="current-year"></span> Guei Tedy Yannick Morel | Côte d'Ivoire</p>
+                <p>WDD 231 Chamber Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Execution -->
+    <script src="scripts/directory.js"></script>
+</body>
+</html>

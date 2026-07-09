@@ -1,0 +1,154 @@
+/* ==========================================================================
+   CHAMBER OF COMMERCE - Tablet & Desktop Styles
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    /* Header & Logo */
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    .header-title-container h1 {
+        font-size: 1.75rem;
+    }
+
+    .header-title-container p {
+        font-size: 0.85rem;
+    }
+
+    /* Hamburger menu hidden on desktop */
+    .hamburger {
+        display: none;
+    }
+
+    /* Navigation */
+    nav {
+        display: block !important;
+        background-color: var(--primary-color);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        padding: 1.25rem 2rem;
+        font-size: 1rem;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-bottom-color: var(--secondary-color);
+        color: #ffffff;
+    }
+
+    /* Main Section */
+    main {
+        padding: 2.5rem 2rem;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Controls container layout */
+    .controls-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.25rem 2rem;
+    }
+
+    .toggle-group {
+        width: auto;
+    }
+
+    .toggle-group button {
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* Members Grid View - Multi-column */
+    .members-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Members List View - Row styling */
+    .members-container.list-view {
+        gap: 1rem;
+    }
+
+    .members-container.list-view .member-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 2rem;
+        border-radius: 12px;
+    }
+
+    .members-container.list-view .member-logo {
+        display: block; /* Show logos on tablet/desktop list view */
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        background-color: #f9fafb;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 0.25rem;
+    }
+
+    .members-container.list-view .member-info-left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex: 2;
+    }
+
+    .members-container.list-view .member-info-mid {
+        flex: 2;
+    }
+
+    .members-container.list-view .member-info-right {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+        flex: 2;
+    }
+
+    /* Footer */
+    footer {
+        padding: 3rem 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+        align-items: center;
+    }
+
+    .footer-meta {
+        text-align: right;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* 3 Columns on Large Screens */
+    .members-container.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
