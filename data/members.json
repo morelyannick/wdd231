@@ -109,6 +109,28 @@
             "website": "www.sir-ci.com",
             "address": "Plateau, Abidjan",
             "image": "images/members/sir.png"
+        },
+        {
+            "id": 11,
+            "name": "Hotel Movempick Plateau",
+            "category": "Hospitality",
+            "description": "Luxury hotel with conference facilities",
+            "phone": "+225 27 20 40 40",
+            "email": "reservationmovempick@gmail.com",
+            "website": "movempick-plateau.ci",
+            "address": "Plateau, Abidjan",
+            "image": "images/members/Movempick.png"
+        },
+        {
+            "id": 12,
+            "name": "Moov Africa",
+            "category": "Telecommunications",
+            "description": "Telecommunications and mobile data service provider",
+            "phone": "+225 20 20 20 20",
+            "email": "info@moov-africa.com",
+            "website": "www.moov-africa.com",
+            "address": "Abidjan",
+            "image": "images/members/moov.png"
         }
     ]
 }

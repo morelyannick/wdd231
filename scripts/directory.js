@@ -38,7 +38,18 @@ const DirectoryModule = {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            this.members = data.members;
+
+            // Expecting data.members to be an array.
+            // Backward-compatible fallback if JSON shape is incorrect.
+            if (Array.isArray(data.members)) {
+                this.members = data.members;
+            } else if (data.members && typeof data.members === "object") {
+                // If members were stored as an object keyed by index (or malformed)
+                this.members = Object.values(data.members);
+            } else {
+                this.members = [];
+            }
+
             this.filteredMembers = [...this.members];
         } catch (error) {
             console.error("Error loading members:", error);
