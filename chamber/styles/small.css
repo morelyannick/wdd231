@@ -1,18 +1,27 @@
 /* ==========================================================================
    CHAMBER OF COMMERCE - Mobile Styles (Base stylesheet)
+   Aligned with index.html design system
    ========================================================================== */
 
 :root {
-    --primary-color: #1b365d;     /* Deep Navy Blue */
-    --secondary-color: #d9a74a;   /* Warm Gold */
-    --text-color: #1f2937;        /* Dark Charcoal */
-    --bg-color: #f3f4f6;          /* Light Off-White */
-    --card-bg: #ffffff;
-    --border-color: #e5e7eb;
-    --accent-color: #c2410c;       /* Muted Orange/Red for warning/important alerts */
-    
-    --font-heading: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    /* ── Exact same palette as index.html / style.css ── */
+    --primary:        #003566;
+    --secondary:      #0077b6;
+    --accent:         #ffc300;
+    --light:          #f8fafc;
+    --dark:           #023047;
+    --shadow:         0 10px 30px rgba(0, 0, 0, .15);
+
+    /* Legacy aliases kept for directory.js card markup */
+    --primary-color:   var(--primary);
+    --secondary-color: var(--accent);
+    --text-color:      var(--dark);
+    --bg-color:        var(--light);
+    --card-bg:         #ffffff;
+    --border-color:    #e0f2fe;
+
+    --font-heading: 'Poppins', 'Outfit', system-ui, sans-serif;
+    --font-body:    'Poppins', 'Inter', system-ui, sans-serif;
 }
 
 * {
@@ -23,20 +32,29 @@
 
 body {
     font-family: var(--font-body);
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    line-height: 1.5;
+    color: var(--dark);
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* Header */
+/* Header – matches index.html */
 header {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    padding: 1.25rem 1.5rem;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid var(--secondary-color);
+    padding: 1rem 5%;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: slideAndZoom 0.8s ease;
+}
+
+@keyframes slideAndZoom {
+    0%   { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0);     opacity: 1; }
 }
 
 .header-title-container {
@@ -50,15 +68,15 @@ header {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #ffffff;
+    color: var(--primary);
 }
 
 .header-title-container p {
-    font-size: 0.75rem;
-    color: var(--secondary-color);
-    font-weight: 500;
+    font-size: 0.72rem;
+    color: var(--secondary);
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
 }
 
 /* Hamburger button */
@@ -78,7 +96,7 @@ header {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--primary);
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
@@ -95,15 +113,14 @@ header {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Navigation */
+/* Navigation – matches index.html */
 nav {
-    background-color: #111827; /* Dark background for mobile dropdown */
+    background-color: #f1f5f9;
     display: none;
+    border-bottom: 3px solid var(--accent);
 }
 
-nav.open {
-    display: block;
-}
+nav.open { display: block; }
 
 nav ul {
     list-style: none;
@@ -113,23 +130,23 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #ffffff;
+    color: var(--dark);
     text-decoration: none;
     padding: 1rem 1.5rem;
-    font-weight: 500;
-    border-bottom: 1px solid #1f2937;
-    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    border-bottom: 1px solid #e0f2fe;
+    transition: all 0.2s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--secondary);
+    background-color: #e0f2fe;
 }
 
 /* Main */
 main {
-    padding: 1.5rem 1rem;
+    padding: 2rem 5%;
     max-width: 1200px;
     margin: 0 auto;
     min-height: 70vh;
@@ -138,24 +155,38 @@ main {
 .page-title {
     font-family: var(--font-heading);
     font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
     text-align: center;
     font-weight: 800;
 }
 
-/* View controls */
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 0.5rem auto 1.5rem;
+}
+
 .controls-container {
-    background-color: var(--card-bg);
+    background: white;
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 53, 102, 0.08);
+}
+
+.controls-container p {
+    font-weight: 600;
+    color: var(--dark);
 }
 
 .toggle-group {
@@ -167,12 +198,13 @@ main {
 .toggle-group button {
     flex: 1;
     padding: 0.6rem;
-    background-color: var(--bg-color);
+    background: var(--light);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-family: var(--font-body);
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--dark);
     transition: all 0.2s ease;
     display: flex;
     justify-content: center;
@@ -181,9 +213,16 @@ main {
 }
 
 .toggle-group button.active {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border-color: var(--primary-color);
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 53, 102, 0.25);
+}
+
+.toggle-group button:hover:not(.active) {
+    background: #e0f2fe;
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 /* Grid & List Layouts */
@@ -199,21 +238,21 @@ main {
 }
 
 .members-container.grid-view .member-card {
-    background-color: var(--card-bg);
+    background: white;
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .members-container.grid-view .member-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 53, 102, 0.15);
 }
 
 .members-container.grid-view .member-logo {
@@ -221,7 +260,7 @@ main {
     height: 100px;
     object-fit: contain;
     margin-bottom: 1rem;
-    background-color: #f9fafb;
+    background: var(--light);
     border-radius: 12px;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
@@ -229,19 +268,19 @@ main {
 
 .members-container.grid-view .member-name {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0.25rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
 }
 
 .members-container.grid-view .member-category {
-    font-size: 0.8rem;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 0.2rem 0.6rem;
+    font-size: 0.78rem;
+    background: #e0f2fe;
+    color: var(--secondary);
+    padding: 0.2rem 0.7rem;
     border-radius: 20px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.75rem;
 }
 
@@ -250,6 +289,7 @@ main {
     color: #4b5563;
     margin-bottom: 1rem;
     flex-grow: 1;
+    line-height: 1.6;
 }
 
 .members-container.grid-view .member-details {
@@ -265,86 +305,99 @@ main {
 
 .members-container.grid-view .member-website {
     margin-top: 0.5rem;
-    color: var(--primary-color);
+    color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.members-container.grid-view .member-website:hover {
+    color: var(--primary);
+    text-decoration: underline;
 }
 
 /* Membership Badge */
 .membership-badge {
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
-    font-size: 0.75rem;
+    font-size: 0.73rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     margin-bottom: 1rem;
 }
 
 .membership-badge.gold {
-    background-color: #fef3c7;
-    color: #92400e;
-    border: 1px solid #f59e0b;
+    background: #fff8e1;
+    color: #7a5800;
+    border: 1px solid var(--accent);
 }
 
 .membership-badge.silver {
-    background-color: #f3f4f6;
+    background: #f3f4f6;
     color: #374151;
     border: 1px solid #9ca3af;
 }
 
 .membership-badge.member {
-    background-color: #e0f2fe;
-    color: #0369a1;
-    border: 1px solid #38bdf8;
+    background: #e0f2fe;
+    color: var(--secondary);
+    border: 1px solid #7dd3fc;
 }
 
-/* List layout (List) */
+/* List layout */
 .members-container.list-view {
     grid-template-columns: 1fr;
     gap: 0.75rem;
 }
 
 .members-container.list-view .member-card {
-    background-color: var(--card-bg);
+    background: white;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    box-shadow: 0 2px 8px rgba(0, 53, 102, 0.07);
+    transition: transform 0.2s ease, border-left 0.2s ease;
+}
+
+.members-container.list-view .member-card:hover {
+    transform: translateX(4px);
+    border-left: 4px solid var(--accent);
 }
 
 .members-container.list-view .member-logo {
-    display: none; /* Hide logos in mobile list view to keep it compact */
+    display: none;
 }
 
 .members-container.list-view .member-name {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 .members-container.list-view .membership-badge {
     width: fit-content;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
 }
 
 .members-container.list-view .member-category {
     font-size: 0.8rem;
-    color: #4b5563;
+    color: var(--secondary);
     font-weight: 600;
 }
 
 .members-container.list-view .member-desc {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #4b5563;
 }
 
 .members-container.list-view .member-details {
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     color: #6b7280;
     display: flex;
     flex-direction: column;
@@ -352,21 +405,26 @@ main {
 }
 
 .members-container.list-view .member-website {
-    color: var(--primary-color);
+    color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
-/* Footer */
+.members-container.list-view .member-website:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+/* Footer – matches index.html */
 footer {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    padding: 2rem 1.5rem;
-    margin-top: 3rem;
-    border-top: 4px solid var(--secondary-color);
+    background: var(--primary);
+    color: white;
+    padding: 2.5rem 5%;
+    margin-top: 4rem;
+    border-top: 4px solid var(--accent);
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .footer-container {
@@ -380,21 +438,22 @@ footer {
 .footer-info h3 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    color: var(--secondary-color);
+    color: var(--accent);
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .footer-info p {
-    color: #e5e7eb;
+    color: #e0f2fe;
 }
 
 .footer-meta {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 1rem;
 }
 
 .footer-meta p {
-    color: #9ca3af;
+    color: #93c5fd;
     font-size: 0.8rem;
     margin-bottom: 0.25rem;
 }

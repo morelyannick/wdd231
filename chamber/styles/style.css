@@ -152,7 +152,7 @@ nav a:hover,
 
     transform: translateY(-50%);
 
-    background: transparent;
+    background: radial-gradient();
 
     padding: 2rem;
 
