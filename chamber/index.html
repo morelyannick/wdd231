@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- meta facebook -->
+    <meta property="og:title" content="Abidjan Chamber of Commerce">
+    <meta property="og:description" content="Connecting businesses and entrepreneurs in Abidjan">
+    <meta property="og:image"
+        content="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&units=imperial&appid=6d4bb9caa6f7eb96a5276c1485e0507d">
+    <meta property="og:url" content="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&units=imperial&appid=6d4bb9caa6f7eb96a5276c1485e0507d">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abidjan Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon01.ico">
+    <meta name="description" content="Abidjan Chamber of Commerce connecting businesses and entrepreneurs">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Abidjan Chamber</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="active">
+                Home
+            </a>
+            <a href="directory.html">
+                Directory
+            </a>
+            <a href="discover.html">
+                Discover
+            </a>
+            <a href="join.html">
+                Join
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <img src="../images/abidjan_belle.webp" alt="Business district Abidjan">
+            <div class="hero-content">
+                <h2>
+                    Grow Your Business With Us
+                </h2>
+                <p>
+                    Connecting entrepreneurs, companies and opportunities.
+                </p>
+                <a class="cta" href="join.html">
+                    Join the Chamber
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="container about">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="about-content">
+                <p>
+                    Founded to support the economic vitality of Abidjan, the Abidjan Chamber of Commerce
+                    brings together entrepreneurs, small businesses, and large corporations around a shared
+                    goal: fostering growth, innovation, and collaboration within our business community.
+                </p>
+                <p>
+                    Since our founding, we have supported our members through networking events,
+                    training programs, partnership opportunities, and increased visibility
+                    with the public and investors.
+                </p>
+                <ul class="about-goals">
+                    <li>Foster exchanges among local entrepreneurs</li>
+                    <li>Promote the economic development of the region</li>
+                    <li>Provide resources and support to members</li>
+                    <li>Create lasting partnership opportunities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+
+        <section class="container">
+            <h2 class="section-title">
+                Upcoming Events
+            </h2>
+            <div class="card">
+                <h3>
+                    Business Networking Night
+                </h3>
+                <p>
+                    Meet local entrepreneurs and discover new partnerships.
+                </p>
+                <p>
+                    📅 August 20, 2026
+                </p>
+            </div>
+        </section>
+
+        <!-- WEATHER -->
+
+        <section class="container weather">
+            <h2 class="section-title">
+                Weather
+            </h2>
+            <div class="weather-box">
+                <h3>
+                    Abidjan, Côte d'Ivoire
+                </h3>
+                <p>
+                    Temperature:
+                    <span id="temperature">
+                        Loading...
+                    </span>
+                </p>
+                <p id="description">
+                </p>
+                <h3>
+                    3 Day Forecast
+                </h3>
+                <div id="forecast">
+                </div>
+            </div>
+        </section>
+
+        <!-- SPOTLIGHT -->
+
+        <section class="container">
+            <h2 class="section-title">
+                Member Spotlight
+            </h2>
+            <div id="spotlights" class="spotlight-grid">
+            </div>
+        </section>
+
+        <section class="container stats">
+            <div class="stat"><span class="stat-number">450+</span>
+                <p>Active Members</p>
+            </div>
+            <div class="stat"><span class="stat-number">120</span>
+                <p>Events/Year</p>
+            </div>
+            <div class="stat"><span class="stat-number">15</span>
+                <p>Years of Existence</p>
+            </div>
+        </section>
+
+        <section class="container newsletter">
+            <h2 class="section-title">Stay Informed</h2>
+            <form>
+                <label type="email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Abidjan Chamber of Commerce
+        </p>
+        <p>
+            Yannick Guei | WDD231 Project
+        </p>
+    </footer>
+
+</body>
+
+</html>
