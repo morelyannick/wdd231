@@ -711,8 +711,10 @@ textarea:focus-visible {
 }
 
 .page-title {
+    display: block;
     color: #203247;
     font-size: 1.8rem;
+    font-weight: 700;
     line-height: 1.2;
 }
 

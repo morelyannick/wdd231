@@ -3,61 +3,73 @@
 
 <head>
 
-    <!-- meta facebook -->
+    <!-- Open Graph / Social Meta -->
     <meta property="og:title" content="Abidjan Chamber of Commerce">
-    <meta property="og:description" content="Connecting businesses and entrepreneurs in Abidjan">
-    <meta property="og:image"
-        content="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&units=imperial&appid=6d4bb9caa6f7eb96a5276c1485e0507d">
-    <meta property="og:url" content="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&units=imperial&appid=6d4bb9caa6f7eb96a5276c1485e0507d">
+    <meta property="og:description" content="Connecting businesses and entrepreneurs in Abidjan, Côte d'Ivoire.">
+    <meta property="og:image" content="../images/abidjan_belle.webp">
+    <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Required meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abidjan Chamber of Commerce – connecting businesses and entrepreneurs in Côte d'Ivoire.">
+    <meta name="author" content="Guei Tedy Yannick">
+
     <title>Abidjan Chamber of Commerce</title>
-    <link rel="icon" href="images/favicon01.ico">
-    <meta name="description" content="Abidjan Chamber of Commerce connecting businesses and entrepreneurs">
-    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="icon" href="images/favicon01.ico" type="image/x-icon">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
         <div class="logo">
             <h1>Abidjan Chamber</h1>
         </div>
-        <nav>
-            <a href="index.html" class="active">
-                Home
-            </a>
-            <a href="directory.html">
-                Directory
-            </a>
-            <a href="discover.html">
-                Discover
-            </a>
-            <a href="join.html">
-                Join
-            </a>
+
+        <!-- Hamburger button -->
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation" aria-controls="main-nav"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Overview</span>
+        </nav>
+
         <!-- HERO -->
         <section class="hero">
-            <img src="../images/abidjan_belle.webp" alt="Business district Abidjan">
+            <img src="../images/abidjan_belle.webp" alt="Business district of Abidjan, Côte d'Ivoire" width="1920"
+                height="1080">
             <div class="hero-content">
-                <h2>
-                    Grow Your Business With Us
-                </h2>
-                <p>
-                    Connecting entrepreneurs, companies and opportunities.
-                </p>
-                <a class="cta" href="join.html">
-                    Join the Chamber
-                </a>
+                <h2>Grow Your Business With Us</h2>
+                <p>Connecting entrepreneurs, companies and opportunities.</p>
+                <a class="cta" href="join.html">Join the Chamber</a>
             </div>
         </section>
 
@@ -85,89 +97,68 @@
         </section>
 
         <!-- EVENTS -->
-
         <section class="container">
-            <h2 class="section-title">
-                Upcoming Events
-            </h2>
+            <h2 class="section-title">Upcoming Events</h2>
             <div class="card">
-                <h3>
-                    Business Networking Night
-                </h3>
-                <p>
-                    Meet local entrepreneurs and discover new partnerships.
-                </p>
-                <p>
-                    📅 August 20, 2026
-                </p>
+                <h3>Business Networking Night</h3>
+                <p>Meet local entrepreneurs and discover new partnerships.</p>
+                <p>📅 August 20, 2026</p>
             </div>
         </section>
 
         <!-- WEATHER -->
-
         <section class="container weather">
-            <h2 class="section-title">
-                Weather
-            </h2>
+            <h2 class="section-title">Weather</h2>
             <div class="weather-box">
-                <h3>
-                    Abidjan, Côte d'Ivoire
-                </h3>
-                <p>
-                    Temperature:
-                    <span id="temperature">
-                        Loading...
-                    </span>
-                </p>
-                <p id="description">
-                </p>
-                <h3>
-                    3 Day Forecast
-                </h3>
-                <div id="forecast">
-                </div>
+                <h3>Abidjan, Côte d'Ivoire</h3>
+                <p>Temperature: <span id="temperature">Loading…</span></p>
+                <p id="description"></p>
+                <h3>3-Day Forecast</h3>
+                <div id="forecast"></div>
             </div>
         </section>
 
-        <!-- SPOTLIGHT -->
-
+        <!-- MEMBER SPOTLIGHT -->
         <section class="container">
-            <h2 class="section-title">
-                Member Spotlight
-            </h2>
-            <div id="spotlights" class="spotlight-grid">
-            </div>
+            <h2 class="section-title">Member Spotlight</h2>
+            <div id="spotlights" class="spotlight-grid"></div>
         </section>
 
+        <!-- STATS -->
         <section class="container stats">
-            <div class="stat"><span class="stat-number">450+</span>
+            <div class="stat">
+                <span class="stat-number">450+</span>
                 <p>Active Members</p>
             </div>
-            <div class="stat"><span class="stat-number">120</span>
+            <div class="stat">
+                <span class="stat-number">120</span>
                 <p>Events/Year</p>
             </div>
-            <div class="stat"><span class="stat-number">15</span>
+            <div class="stat">
+                <span class="stat-number">15</span>
                 <p>Years of Existence</p>
             </div>
         </section>
 
+        <!-- NEWSLETTER -->
         <section class="container newsletter">
             <h2 class="section-title">Stay Informed</h2>
             <form>
-                <label type="email" placeholder="Your email" required>
+                <label for="newsletter-email">Your email address</label>
+                <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>
-            © 2026 Abidjan Chamber of Commerce
-        </p>
-        <p>
-            Yannick Guei | WDD231 Project
-        </p>
+        <p>© <span id="current-year"></span> Abidjan Chamber of Commerce</p>
+        <p>Yannick Guei | WDD231 Project</p>
     </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 
 </body>
 
