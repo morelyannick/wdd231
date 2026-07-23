@@ -5,7 +5,7 @@
 
 const WeatherModule = {
     // API key for OpenWeatherMap (Free tier)
-    API_KEY: "YOUR_API_KEY_HERE", // Replace with actual API key
+    API_KEY: "302d10f518679491f653175d8c71f123",
     CITY: "Abidjan",
     COUNTRY_CODE: "CI",
 
