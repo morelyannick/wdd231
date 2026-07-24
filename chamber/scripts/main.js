@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Footer year
     const yearEl = document.getElementById("current-year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const lastModifiedEl = document.getElementById("last-modified");
+    if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
 });

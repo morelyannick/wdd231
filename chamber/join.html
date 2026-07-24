@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apply to join the Abidjan Chamber of Commerce and select a membership level for your organization.">
+    <meta name="author" content="Guei Tedy Yannick">
+
+    <meta property="og:title" content="Join - Abidjan Chamber of Commerce">
+    <meta property="og:description"
+        content="Submit a membership application to join Abidjan's business community.">
+    <meta property="og:image" content="https://morelyannick.github.io/wdd231/images/abidjan01.jpg">
+    <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <title>Join - Abidjan Chamber of Commerce</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon01.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div class="header-title-container">
+            <span class="profile-mark" aria-hidden="true">ACC</span>
+            <div>
+                <h1>Abidjan Chamber</h1>
+                <p>Of Commerce & Industry</p>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="../discover.html">Discover</a></li>
+                <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+            </ul>
+        </nav>
+
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation" aria-controls="main-nav"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main id="main-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Join</span>
+        </nav>
+
+        <h2 class="page-title">Membership Application</h2>
+        <p class="page-intro">
+            Join Abidjan's business network for advocacy, events, professional training, and local visibility.
+        </p>
+
+        <div class="join-layout">
+            <section class="join-form-panel" aria-labelledby="application-heading">
+                <h3 id="application-heading">Apply to Join</h3>
+                <p class="form-note">Fields marked with an asterisk are required.</p>
+
+                <form method="get" action="thankyou.html" id="join-form">
+                    <label for="first-name">
+                        First Name *
+                        <input type="text" id="first-name" name="first-name" title="Applicant first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label for="last-name">
+                        Last Name *
+                        <input type="text" id="last-name" name="last-name" title="Applicant last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label for="organization-title">
+                        Organizational Title
+                        <input type="text" id="organization-title" name="organization-title"
+                            title="Organizational title, at least seven letters, hyphens, or spaces"
+                            autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
+                    </label>
+
+                    <label for="email">
+                        Email Address *
+                        <input type="email" id="email" name="email" title="Applicant email address"
+                            autocomplete="email" placeholder="name@example.com" required>
+                    </label>
+
+                    <label for="phone">
+                        Mobile Phone Number *
+                        <input type="tel" id="phone" name="phone" title="Applicant mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <label for="organization">
+                        Business / Organization Name *
+                        <input type="text" id="organization" name="organization"
+                            title="Business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label for="membership">
+                        Membership Level *
+                        <select id="membership" name="membership" title="Membership level" required>
+                            <option value="">Select a membership level</option>
+                            <option value="np">NP Membership - Non-Profit</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">
+                        Business / Organization Description
+                        <textarea id="description" name="description" title="Business or organization description"
+                            rows="5"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <input class="submit-btn" type="submit" value="Apply for Membership">
+                </form>
+            </section>
+
+            <section class="membership-panel" aria-labelledby="membership-heading">
+                <h3 id="membership-heading">Membership Levels</h3>
+                <div class="membership-cards">
+                    <article class="membership-card level-np">
+                        <h4>NP Membership</h4>
+                        <p>For nonprofit and community organizations.</p>
+                        <a href="#np-modal" data-modal="np-modal">View Benefits</a>
+                    </article>
+
+                    <article class="membership-card level-bronze">
+                        <h4>Bronze Membership</h4>
+                        <p>Entry support for small businesses and startups.</p>
+                        <a href="#bronze-modal" data-modal="bronze-modal">View Benefits</a>
+                    </article>
+
+                    <article class="membership-card level-silver">
+                        <h4>Silver Membership</h4>
+                        <p>Stronger visibility for growing organizations.</p>
+                        <a href="#silver-modal" data-modal="silver-modal">View Benefits</a>
+                    </article>
+
+                    <article class="membership-card level-gold">
+                        <h4>Gold Membership</h4>
+                        <p>Premier exposure and strategic chamber access.</p>
+                        <a href="#gold-modal" data-modal="gold-modal">View Benefits</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="np-modal" class="membership-modal" aria-labelledby="np-title">
+            <button type="button" class="modal-close" aria-label="Close NP Membership benefits">X</button>
+            <h3 id="np-title">NP Membership Benefits</h3>
+            <p class="modal-cost">Cost: Free</p>
+            <ul>
+                <li>Basic chamber directory listing</li>
+                <li>Invitations to community networking events</li>
+                <li>Access to nonprofit resource announcements</li>
+                <li>Member rate for selected chamber workshops</li>
+            </ul>
+        </dialog>
+
+        <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-title">
+            <button type="button" class="modal-close" aria-label="Close Bronze Membership benefits">X</button>
+            <h3 id="bronze-title">Bronze Membership Benefits</h3>
+            <p class="modal-cost">Cost: $100 per year</p>
+            <ul>
+                <li>Standard directory listing with contact details</li>
+                <li>Access to monthly networking events</li>
+                <li>Training invitations for one representative</li>
+                <li>10% discount on chamber events</li>
+            </ul>
+        </dialog>
+
+        <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-title">
+            <button type="button" class="modal-close" aria-label="Close Silver Membership benefits">X</button>
+            <h3 id="silver-title">Silver Membership Benefits</h3>
+            <p class="modal-cost">Cost: $300 per year</p>
+            <ul>
+                <li>Enhanced directory placement</li>
+                <li>Two complimentary seats at monthly mixers</li>
+                <li>One social media spotlight each year</li>
+                <li>20% discount on event sponsorships</li>
+            </ul>
+        </dialog>
+
+        <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-title">
+            <button type="button" class="modal-close" aria-label="Close Gold Membership benefits">X</button>
+            <h3 id="gold-title">Gold Membership Benefits</h3>
+            <p class="modal-cost">Cost: $500 per year</p>
+            <ul>
+                <li>Featured home page spotlight opportunities</li>
+                <li>Priority invitations to executive events</li>
+                <li>Newsletter advertising placements</li>
+                <li>Dedicated chamber advocacy consultation</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Abidjan Chamber of Commerce</h3>
+                <p>Plateau, Boulevard de la Republique, Abidjan</p>
+                <p>Phone: +225 27 20 21 54 87</p>
+                <p>Email: info@abidjanchamber.ci</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="current-year"></span> Guei Tedy Yannick Morel | Cote d'Ivoire</p>
+                <p>WDD 231 Chamber Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</body>
+
+</html>

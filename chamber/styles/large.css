@@ -154,3 +154,61 @@
         gap: 2rem;
     }
 }
+
+@media (min-width: 768px) {
+    .join-layout {
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+        gap: 2rem;
+    }
+
+    .join-form-panel,
+    .membership-panel,
+    .thankyou-panel {
+        padding: 2rem;
+    }
+
+    #join-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #join-form label:nth-of-type(7),
+    #join-form label:nth-of-type(8),
+    #join-form .submit-btn {
+        grid-column: 1 / -1;
+    }
+
+    .membership-panel {
+        position: sticky;
+        top: 110px;
+    }
+
+    .summary-item {
+        grid-template-columns: minmax(180px, 0.45fr) 1fr;
+        align-items: start;
+    }
+
+    .thankyou-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .membership-cards {
+        gap: 1.15rem;
+    }
+
+    .membership-card {
+        padding: 1.15rem;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+    }
+
+    .main-nav {
+        flex-basis: auto;
+        order: 0;
+    }
+}
