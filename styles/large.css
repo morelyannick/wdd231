@@ -42,6 +42,7 @@
     }
 
     section {
+        animation: fadeInUp 0.6s ease-out;
         padding: 3rem;
     }
 
@@ -279,10 +280,6 @@
         }
     }
 
-    section {
-        animation: fadeInUp 0.6s ease-out;
-    }
-
     /* ====== CONTAINER ====== */
     .container {
         max-width: 1200px;
@@ -364,6 +361,7 @@
 @media (min-width: 1800px) {
     main {
         max-width: 1400px;
+        padding: 4rem;
     }
 
     .container {
@@ -379,10 +377,6 @@
     }
 
     section {
-        padding: 4rem;
-    }
-
-    main {
         padding: 4rem;
     }
 }

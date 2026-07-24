@@ -10,7 +10,8 @@
 
     <!-- Open Graph Social Media Tags -->
     <meta property="og:title" content="Membership Application - Abidjan Chamber of Commerce">
-    <meta property="og:description" content="Apply to join the Abidjan Chamber of Commerce. Select a membership level and grow your business.">
+    <meta property="og:description"
+        content="Apply to join the Abidjan Chamber of Commerce. Select a membership level and grow your business.">
     <meta property="og:image" content="../images/abidjan01.jpg">
     <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/join.html">
     <meta property="og:type" content="website">
@@ -22,10 +23,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/small.css">
     <link rel="stylesheet" href="../styles/medium.css">
@@ -37,8 +39,8 @@
         <div class="logo">
             <h1>Abidjan Chamber of Commerce</h1>
         </div>
-        <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation"
-            aria-controls="nav" aria-expanded="false">
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation" aria-controls="nav"
+            aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -50,7 +52,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html" aria-current="page" class="active">Join</a></li>
-            <li><a href="../discover.html">Discover</a></li>
+            <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
@@ -71,37 +73,44 @@
                     <!-- First Name -->
                     <label for="fname" title="First Name">
                         First Name *
-                        <input type="text" id="fname" name="fname" required title="First Name" autocomplete="given-name">
+                        <input type="text" id="fname" name="fname" required title="First Name"
+                            autocomplete="given-name">
                     </label>
 
                     <!-- Last Name -->
                     <label for="lname" title="Last Name">
                         Last Name *
-                        <input type="text" id="lname" name="lname" required title="Last Name" autocomplete="family-name">
+                        <input type="text" id="lname" name="lname" required title="Last Name"
+                            autocomplete="family-name">
                     </label>
 
                     <!-- Organizational Title -->
                     <label for="orgtitle" title="Organizational Title (Minimum 7 letters/hyphens/spaces)">
                         Organizational Title
-                        <input type="text" id="orgtitle" name="orgtitle" title="Organizational Title (Minimum 7 letters/hyphens/spaces)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                        <input type="text" id="orgtitle" name="orgtitle"
+                            title="Organizational Title (Minimum 7 letters/hyphens/spaces)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
 
                     <!-- Email Address -->
                     <label for="email" title="Email Address">
                         Email Address *
-                        <input type="email" id="email" name="email" required title="Email Address" autocomplete="email" placeholder="example@domain.com">
+                        <input type="email" id="email" name="email" required title="Email Address" autocomplete="email"
+                            placeholder="example@domain.com">
                     </label>
 
                     <!-- Mobile Phone Number -->
                     <label for="phone" title="Mobile Phone Number">
                         Mobile Phone Number *
-                        <input type="tel" id="phone" name="phone" required title="Mobile Phone Number" autocomplete="tel">
+                        <input type="tel" id="phone" name="phone" required title="Mobile Phone Number"
+                            autocomplete="tel">
                     </label>
 
                     <!-- Business / Organization Name -->
                     <label for="organization" title="Business or Organization Name">
                         Business / Organization Name *
-                        <input type="text" id="organization" name="organization" required title="Business or Organization Name" autocomplete="organization">
+                        <input type="text" id="organization" name="organization" required
+                            title="Business or Organization Name" autocomplete="organization">
                     </label>
 
                     <!-- Membership Level Selection -->
@@ -119,14 +128,16 @@
                     <!-- Business Description -->
                     <label for="description" title="Business Description">
                         Business / Organization Description
-                        <textarea id="description" name="description" title="Business Description" placeholder="Describe your business services, vision, or products..."></textarea>
+                        <textarea id="description" name="description" title="Business Description"
+                            placeholder="Describe your business services, vision, or products..."></textarea>
                     </label>
 
                     <!-- Hidden Timestamp Field -->
                     <input type="hidden" name="timestamp" id="timestamp">
 
                     <!-- Submit Button -->
-                    <input type="submit" value="Apply for Membership" class="submit-btn" title="Submit Membership Application">
+                    <input type="submit" value="Apply for Membership" class="submit-btn"
+                        title="Submit Membership Application">
                 </form>
             </section>
 
@@ -141,7 +152,8 @@
                         <h3>NP Membership</h3>
                         <p class="membership-subtitle">Non-Profit Organizations</p>
                         <p class="membership-price">Free (No Fee)</p>
-                        <button type="button" class="modal-open-btn" data-modal="modal-np" aria-haspopup="dialog">Learn More</button>
+                        <button type="button" class="modal-open-btn" data-modal="modal-np" aria-haspopup="dialog">Learn
+                            More</button>
                     </article>
 
                     <!-- Bronze Card -->
@@ -149,7 +161,8 @@
                         <h3>Bronze Membership</h3>
                         <p class="membership-subtitle">Small Businesses</p>
                         <p class="membership-price">$100 / year</p>
-                        <button type="button" class="modal-open-btn" data-modal="modal-bronze" aria-haspopup="dialog">Learn More</button>
+                        <button type="button" class="modal-open-btn" data-modal="modal-bronze"
+                            aria-haspopup="dialog">Learn More</button>
                     </article>
 
                     <!-- Silver Card -->
@@ -157,7 +170,8 @@
                         <h3>Silver Membership</h3>
                         <p class="membership-subtitle">Growing Companies</p>
                         <p class="membership-price">$300 / year</p>
-                        <button type="button" class="modal-open-btn" data-modal="modal-silver" aria-haspopup="dialog">Learn More</button>
+                        <button type="button" class="modal-open-btn" data-modal="modal-silver"
+                            aria-haspopup="dialog">Learn More</button>
                     </article>
 
                     <!-- Gold Card -->
@@ -165,7 +179,8 @@
                         <h3>Gold Membership</h3>
                         <p class="membership-subtitle">Established Enterprises</p>
                         <p class="membership-price">$500 / year</p>
-                        <button type="button" class="modal-open-btn" data-modal="modal-gold" aria-haspopup="dialog">Learn More</button>
+                        <button type="button" class="modal-open-btn" data-modal="modal-gold"
+                            aria-haspopup="dialog">Learn More</button>
                     </article>
                 </div>
             </section>

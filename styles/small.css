@@ -160,26 +160,29 @@ nav ul li a:hover {
     background-color: rgba(44, 62, 80, 0.75);
 }
 
-.hero::before,
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(44, 62, 80, 0.55), rgba(44, 62, 80, 0.55)), url("../images/abidjan-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: -1;
+}
+
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
+    background-image: linear-gradient(rgba(44, 62, 80, 0.55), rgba(44, 62, 80, 0.55)), url("../images/abidjan-hero2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.hero::before {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.55), rgba(44, 62, 80, 0.55)), url("../images/abidjan-hero.jpg");
-    opacity: 1;
-}
-
-.hero::after {
-    background-image: linear-gradient(rgba(44, 62, 80, 0.55), rgba(44, 62, 80, 0.55)), url("../images/abidjan-hero2.jpg");
     opacity: 0;
     animation: hero-image-transition 8s ease-in-out infinite;
+    z-index: -1;
 }
 
 .hero>* {
@@ -510,7 +513,6 @@ dialog p {
     overflow: auto;
 }
 
-.pricing-table th,
 .pricing-table td {
     border: 1px solid var(--border-color);
     padding: 0.75rem;
@@ -519,8 +521,11 @@ dialog p {
 
 .pricing-table th {
     background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
     color: var(--light-text);
     font-weight: 700;
+    padding: 0.75rem;
+    text-align: left;
 }
 
 .pricing-table tbody tr:nth-child(even) {
