@@ -11,7 +11,7 @@
     <!-- Open Graph Social Media Tags -->
     <meta property="og:title" content="Membership Application - Abidjan Chamber of Commerce">
     <meta property="og:description" content="Apply to join the Abidjan Chamber of Commerce. Select a membership level and grow your business.">
-    <meta property="og:image" content="images/abidjan01.jpg">
+    <meta property="og:image" content="https://morelyannick.github.io/wdd231/images/abidjan01.jpg">
     <meta property="og:url" content="https://morelyannick.github.io/wdd231/join.html">
     <meta property="og:type" content="website">
 
@@ -29,12 +29,16 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts in head with defer/module -->
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/join.js"></script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h1>Abidjan Chamber of Commerce</h1>
+            <span class="site-title">Abidjan Chamber of Commerce</span>
         </div>
         <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation"
             aria-controls="nav" aria-expanded="false">
@@ -60,6 +64,8 @@
     </section>
 
     <main id="join-main" class="join-main-content">
+        <h1>Membership Application</h1>
+
         <div class="join-layout">
             <!-- Application Form Column -->
             <section class="join-form-container" aria-labelledby="form-heading">
@@ -234,9 +240,6 @@
         <p>&copy; <span id="currentyear"></span> Abidjan Chamber of Commerce - Côte d'Ivoire</p>
         <p id="lastModified"></p>
     </footer>
-
-    <script src="scripts/main.js"></script>
-    <script type="module" src="scripts/join.js"></script>
 </body>
 
 </html>
