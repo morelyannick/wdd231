@@ -7,19 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupNavigation() {
     const hamburger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav");
+    const nav = document.getElementById("main-nav") || document.getElementById("nav");
 
     if (!hamburger || !nav) return;
 
     const setMenuState = (isOpen) => {
-        hamburger.classList.toggle("active", isOpen);
-        nav.classList.toggle("active", isOpen);
+        hamburger.classList.toggle("open", isOpen);
+        nav.classList.toggle("open", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
         hamburger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     };
 
     hamburger.addEventListener("click", () => {
-        setMenuState(!nav.classList.contains("active"));
+        const isOpen = hamburger.classList.contains("open");
+        setMenuState(!isOpen);
     });
 
     nav.querySelectorAll("a").forEach((link) => {
@@ -37,7 +38,7 @@ function setupNavigation() {
 }
 
 function setFooterDates() {
-    const currentYear = document.getElementById("currentyear");
+    const currentYear = document.getElementById("currentyear") || document.getElementById("current-year");
     const lastModified = document.getElementById("lastModified");
 
     if (currentYear) {
