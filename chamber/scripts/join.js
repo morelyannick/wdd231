@@ -1,5 +1,5 @@
 /**
- * Main JS Entry Point for Join Page
+ * Main JS Entry Point for Chamber Join Page
  * Imports modular functions for timestamp and modal dialog management
  */
 

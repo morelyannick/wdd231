@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Thank you for applying for membership with the Abidjan Chamber of Commerce.">
+    <meta name="author" content="Guei Tedy Yannick">
+
+    <title>Thank You - Abidjan Chamber of Commerce</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon01.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Abidjan Chamber of Commerce</h1>
+        </div>
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation"
+            aria-controls="nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav id="nav" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Application Received</h2>
+        <p>Thank you for submitting your membership application to the Abidjan Chamber of Commerce.</p>
+    </section>
+
+    <main class="thankyou-main-content">
+        <section class="thankyou-card-container">
+            <h2>Thank You for Applying!</h2>
+            <p class="thankyou-message">
+                Your application has been successfully submitted and is currently being processed by our membership committee. Below is a summary of the information submitted.
+            </p>
+
+            <div id="submitted-data" class="submitted-data-box">
+                <!-- Populated dynamically via ES module thankyou.js -->
+            </div>
+
+            <div class="thankyou-actions">
+                <a href="index.html" class="cta-btn">Return to Home</a>
+                <a href="directory.html" class="join-btn">Explore Directory</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Abidjan Chamber of Commerce - Côte d'Ivoire</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/thankyou.js"></script>
+</body>
+
+</html>

@@ -891,3 +891,297 @@ textarea:focus-visible {
     font-size: 0.9rem;
     font-weight: 700;
 }
+
+/* ====== JOIN & MEMBERSHIP STYLES ====== */
+.join-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.join-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.join-form-container,
+.membership-levels-container {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+.form-instruction,
+.levels-instruction {
+    margin-bottom: 1.25rem;
+    color: var(--dark-text);
+    font-size: 0.95rem;
+}
+
+/* Label encasing inputs for accessibility */
+.join-form-container label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+    gap: 0.4rem;
+}
+
+.join-form-container input[type="text"],
+.join-form-container input[type="email"],
+.join-form-container input[type="tel"],
+.join-form-container select,
+.join-form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.join-form-container input:focus,
+.join-form-container select:focus,
+.join-form-container textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(138, 79, 20, 0.15);
+}
+
+/* Membership Level Cards Grid */
+.membership-cards-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+.membership-card {
+    background-color: #ffffff;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardLoadAnimation 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.membership-card:nth-child(1) { animation-delay: 0.1s; }
+.membership-card:nth-child(2) { animation-delay: 0.25s; }
+.membership-card:nth-child(3) { animation-delay: 0.4s; }
+.membership-card:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes cardLoadAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.membership-card.np-card { border-top: 6px solid #5b6f85; }
+.membership-card.bronze-card { border-top: 6px solid #cd7f32; }
+.membership-card.silver-card { border-top: 6px solid #7f8c8d; }
+.membership-card.gold-card { border-top: 6px solid #d4ac0d; }
+
+.membership-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.membership-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.membership-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.75rem 0 1rem;
+}
+
+.modal-open-btn {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-open-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Membership Dialog Modals */
+dialog.membership-modal {
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    max-width: 520px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    inset: 0;
+}
+
+dialog.membership-modal::backdrop {
+    background-color: rgba(32, 50, 71, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+dialog.membership-modal h2 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.4rem;
+}
+
+dialog.membership-modal .modal-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+dialog.membership-modal h3 {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: var(--secondary-color);
+}
+
+dialog.membership-modal ul {
+    margin-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+dialog.membership-modal ul li {
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    transform: scale(1.15);
+}
+
+/* ====== THANK YOU PAGE STYLES ====== */
+.thankyou-main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.thankyou-card-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+.thankyou-message {
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.thankyou-summary {
+    background-color: #f8fafc;
+    border-left: 5px solid var(--success-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.thankyou-summary h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.summary-intro {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.summary-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.summary-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item dt {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.summary-item dd {
+    color: var(--dark-text);
+    margin: 0;
+    word-break: break-word;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--secondary-color);
+}
+
+.badge-np { background-color: #5b6f85; }
+.badge-bronze { background-color: #cd7f32; }
+.badge-silver { background-color: #7f8c8d; }
+.badge-gold { background-color: #d4ac0d; }
+
+.thankyou-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+

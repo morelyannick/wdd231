@@ -403,4 +403,9 @@
     .course-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .join-layout {
+        grid-template-columns: 1.3fr 1fr;
+        gap: 2.5rem;
+    }
 }
