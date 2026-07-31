@@ -2,8 +2,44 @@ import { places } from '../data/fun_place.mjs';
 
 const discoverGrid = document.querySelector('[data-discover-grid]');
 const visitMessage = document.getElementById('visit-message');
+const placeModal = document.getElementById('place-modal');
+const placeModalTitle = document.getElementById('place-modal-title');
+const placeModalAddress = document.getElementById('place-modal-address');
+const placeModalDescription = document.getElementById('place-modal-description');
 const fallbackImage = 'https://www.gstatic.com/webp/gallery/1.webp';
 const storageKey = 'chamber-last-visit';
+let lastFocusedButton = null;
+
+function openPlaceModal(place) {
+    if (!placeModal || !placeModalTitle || !placeModalAddress || !placeModalDescription) return;
+
+    placeModalTitle.textContent = place.name;
+    placeModalAddress.textContent = place.address;
+    placeModalDescription.textContent = place.description;
+    placeModal.classList.add('is-open');
+    placeModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    // Move focus into the modal (close button is the first focusable element)
+    const closeButton = document.querySelector('.place-modal__close');
+    if (closeButton) {
+        closeButton.focus();
+    }
+}
+
+function closePlaceModal() {
+    if (!placeModal) return;
+
+    // Return focus to the trigger button BEFORE hiding the modal
+    if (lastFocusedButton && document.body.contains(lastFocusedButton)) {
+        lastFocusedButton.focus();
+        lastFocusedButton = null;
+    }
+
+    placeModal.classList.remove('is-open');
+    placeModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+}
 
 function showVisitMessage() {
     if (!visitMessage) return;
@@ -63,14 +99,46 @@ function renderPlaces() {
         </figure>
         <address>${place.address}</address>
         <p>${place.description}</p>
-        <button type="button">Learn more</button>
+        <button type="button" class="learn-more-btn" data-place-index="${index}">Learn more</button>
       </article>
     `)
         .join('');
+
+    document.querySelectorAll('.learn-more-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+            const placeIndex = Number(button.dataset.placeIndex);
+            const selectedPlace = featuredPlaces[placeIndex];
+
+            if (selectedPlace) {
+                lastFocusedButton = button;
+                openPlaceModal(selectedPlace);
+            }
+        });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     showVisitMessage();
     renderPlaces();
     validateLocalLinks();
+
+    const modalCloseButton = document.querySelector('.place-modal__close');
+
+    if (modalCloseButton) {
+        modalCloseButton.addEventListener('click', closePlaceModal);
+    }
+
+    if (placeModal) {
+        placeModal.addEventListener('click', (event) => {
+            if (event.target === placeModal) {
+                closePlaceModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closePlaceModal();
+        }
+    });
 });

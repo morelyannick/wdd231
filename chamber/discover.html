@@ -77,6 +77,15 @@
         <section id="visit-message" class="visit-message" aria-live="polite" role="status"></section>
 
         <section class="discover-grid" data-discover-grid aria-label="Places of interest"></section>
+
+        <div id="place-modal" class="place-modal" aria-hidden="true" role="dialog" aria-labelledby="place-modal-title" aria-describedby="place-modal-description">
+            <div class="place-modal__dialog">
+                <button type="button" class="place-modal__close" aria-label="Close place details">&times;</button>
+                <h3 id="place-modal-title"></h3>
+                <p id="place-modal-address" class="place-modal__address"></p>
+                <p id="place-modal-description" class="place-modal__description"></p>
+            </div>
+        </div>
     </main>
 
     <footer>
