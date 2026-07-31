@@ -1,13 +1,12 @@
 // Load company spotlight
 
 
-const spotlightContainer =
-    document.querySelector("#spotlights");
+const spotlightContainer = document.querySelector("#spotlights");
 
 
 
 async function loadSpotlights() {
-
+    if (!spotlightContainer) return;
 
     try {
 
@@ -51,18 +50,12 @@ async function loadSpotlights() {
 
 }
 
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMenu = document.getElementById('nav-menu');
 
-hamburgerBtn.addEventListener('click', () => {
-  hamburgerBtn.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
 
 
 
 function displaySpotlights(members) {
-
+    if (!spotlightContainer) return;
 
     spotlightContainer.innerHTML = "";
 

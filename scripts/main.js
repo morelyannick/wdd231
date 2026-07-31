@@ -12,14 +12,14 @@ function setupNavigation() {
     if (!hamburger || !nav) return;
 
     const setMenuState = (isOpen) => {
-        hamburger.classList.toggle("open", isOpen);
-        nav.classList.toggle("open", isOpen);
+        hamburger.classList.toggle("active", isOpen);
+        nav.classList.toggle("active", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
         hamburger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     };
 
     hamburger.addEventListener("click", () => {
-        const isOpen = hamburger.classList.contains("open");
+        const isOpen = hamburger.classList.contains("active");
         setMenuState(!isOpen);
     });
 

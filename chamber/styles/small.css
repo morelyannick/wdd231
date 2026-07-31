@@ -5,23 +5,23 @@
 
 :root {
     /* ── Exact same palette as index.html / style.css ── */
-    --primary:        #003566;
-    --secondary:      #0077b6;
-    --accent:         #ffc300;
-    --light:          #f8fafc;
-    --dark:           #023047;
-    --shadow:         0 10px 30px rgba(0, 0, 0, .15);
+    --primary: #003566;
+    --secondary: #0077b6;
+    --accent: #ffc300;
+    --light: #f8fafc;
+    --dark: #023047;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .15);
 
     /* Legacy aliases kept for directory.js card markup */
-    --primary-color:   var(--primary);
+    --primary-color: var(--primary);
     --secondary-color: var(--accent);
-    --text-color:      var(--dark);
-    --bg-color:        var(--light);
-    --card-bg:         #ffffff;
-    --border-color:    #e0f2fe;
+    --text-color: var(--dark);
+    --bg-color: var(--light);
+    --card-bg: #ffffff;
+    --border-color: #e0f2fe;
 
     --font-heading: 'Poppins', 'Outfit', system-ui, sans-serif;
-    --font-body:    'Poppins', 'Inter', system-ui, sans-serif;
+    --font-body: 'Poppins', 'Inter', system-ui, sans-serif;
 }
 
 * {
@@ -53,8 +53,15 @@ header {
 }
 
 @keyframes slideAndZoom {
-    0%   { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0);     opacity: 1; }
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .header-title-container {
@@ -120,7 +127,9 @@ nav {
     border-bottom: 3px solid var(--accent);
 }
 
-nav.open { display: block; }
+nav.open {
+    display: block;
+}
 
 nav ul {
     list-style: none;
@@ -175,6 +184,19 @@ main {
     min-height: 70vh;
 }
 
+.profile-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+}
+
 .page-title {
     font-family: var(--font-heading);
     font-size: 2rem;
@@ -192,6 +214,127 @@ main {
     background: var(--accent);
     border-radius: 2px;
     margin: 0.5rem auto 1.5rem;
+}
+
+.discover-intro {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.discover-intro p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--dark);
+}
+
+.visit-message {
+    margin-bottom: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid var(--secondary);
+    border-radius: 8px;
+    background: #e0f2fe;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 53, 102, 0.08);
+}
+
+.discover-card h2 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.discover-figure {
+    margin-bottom: 0.75rem;
+}
+
+.discover-figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+}
+
+.discover-card p {
+    margin-bottom: 0.9rem;
+    color: var(--dark);
+}
+
+.discover-card button {
+    border: none;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    padding: 0.65rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.discover-card--1 {
+    grid-area: card1;
+}
+
+.discover-card--2 {
+    grid-area: card2;
+}
+
+.discover-card--3 {
+    grid-area: card3;
+}
+
+.discover-card--4 {
+    grid-area: card4;
+}
+
+.discover-card--5 {
+    grid-area: card5;
+}
+
+.discover-card--6 {
+    grid-area: card6;
+}
+
+.discover-card--7 {
+    grid-area: card7;
+}
+
+.discover-card--8 {
+    grid-area: card8;
+}
+
+.link-broken {
+    color: #b91c1c;
+    text-decoration: line-through;
 }
 
 .controls-container {
@@ -803,4 +946,412 @@ header {
 .main-nav {
     flex-basis: 100%;
     order: 3;
+}
+
+/* ==========================================================================
+   HOME PAGE SECTIONS (hero, container, spotlight, stats, newsletter)
+   ========================================================================== */
+
+/* ── Hero section ── */
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    color: #ffffff;
+    text-align: center;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(2, 48, 71, 0.75), rgba(2, 48, 71, 0.75));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.5rem;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.85rem 2.5rem;
+    background: var(--accent);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(255, 195, 0, 0.4);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta:hover {
+    background: #ffd633;
+    transform: scale(1.03);
+}
+
+/* ── Container section wrapper ── */
+.container {
+    width: min(100%, 1200px);
+    margin: 2rem auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+}
+
+/* ── About section ── */
+.about-content p {
+    margin-bottom: 1rem;
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+.about-goals {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.about-goals li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.about-goals li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+/* ── Card (events) ── */
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--dark);
+    margin-bottom: 0.35rem;
+}
+
+/* ── Weather ── */
+.weather-box {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.weather-box h3 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.weather-box p {
+    color: var(--dark);
+    margin-bottom: 0.35rem;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast-card {
+    background: var(--light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.forecast-card p {
+    margin-bottom: 0.25rem;
+    color: var(--dark);
+    font-size: 0.85rem;
+}
+
+.forecast-card strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+/* ── Spotlight ── */
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.spotlight-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-4px);
+}
+
+.spotlight-card img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    background: var(--light);
+    padding: 0.5rem;
+}
+
+.spotlight-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card p {
+    color: var(--dark);
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+}
+
+.spotlight-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+/* ── Stats ── */
+.stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+
+.stat {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.stat p {
+    color: var(--dark);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* ── Newsletter ── */
+.newsletter {
+    background: linear-gradient(135deg, #ffffff, #f0f7ff);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 53, 102, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    border-radius: 20px 20px 0 0;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 480px;
+    margin: 1.25rem auto 0;
+}
+
+.newsletter label {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 0.15rem;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    min-height: 48px;
+    border: 2px solid #d7e3ef;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    color: var(--dark);
+    font: inherit;
+    background: #ffffff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newsletter input[type="email"]:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.15);
+}
+
+.newsletter input[type="email"]:hover {
+    border-color: var(--secondary);
+}
+
+.newsletter button {
+    min-height: 48px;
+    border: 0;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 53, 102, 0.25);
+}
+
+.newsletter button:hover {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 53, 102, 0.35);
+}
+
+.newsletter button:active {
+    transform: translateY(0);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero::after,
+    .hero-content,
+    .spotlight-card,
+    .cta {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* ── Responsive: Tablet (768px+) ── */
+@media (min-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .newsletter form {
+        flex-direction: row;
+    }
+
+    .newsletter input[type="email"] {
+        flex: 1;
+    }
 }

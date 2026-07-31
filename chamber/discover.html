@@ -4,26 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for applying to join the Abidjan Chamber of Commerce.">
+    <meta name="description"
+        content="Explore vibrant destinations and places of interest around Abidjan through the chamber discover page.">
     <meta name="author" content="Guei Tedy Yannick">
 
-    <meta property="og:title" content="Thank You - Abidjan Chamber of Commerce">
-    <meta property="og:description" content="Membership application confirmation for the Abidjan Chamber of Commerce.">
+    <meta property="og:title" content="Discover - Abidjan Chamber of Commerce">
+    <meta property="og:description"
+        content="Discover local attractions, landmarks, and cultural experiences in and around Abidjan.">
     <meta property="og:image" content="https://morelyannick.github.io/wdd231/images/abidjan01.jpg">
-    <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:url" content="https://morelyannick.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
 
-    <title>Thank You - Abidjan Chamber of Commerce</title>
+    <title>Discover - Abidjan Chamber of Commerce</title>
 
     <link rel="icon" type="image/x-icon" href="images/favicon01.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +48,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
@@ -55,50 +61,39 @@
         </button>
     </header>
 
-    <main id="main-content" class="thankyou-main">
+    <main id="main-content">
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Home</a>
             <span aria-hidden="true">/</span>
-            <span aria-current="page">Thank You</span>
+            <span aria-current="page">Discover</span>
         </nav>
 
-        <section class="thankyou-panel" aria-labelledby="thankyou-heading">
-            <h2 id="thankyou-heading">Thank You for Applying</h2>
-            <p>
-                Your membership application has been received. Our team will review your information and follow up
-                with next steps.
-            </p>
-
-            <div class="submitted-summary" aria-live="polite">
-                <h3>Application Summary</h3>
-                <dl id="submitted-data" class="summary-list"></dl>
-            </div>
-
-            <div class="thankyou-actions">
-                <a class="action-link primary-action" href="index.html">Return Home</a>
-                <a class="action-link" href="directory.html">View Directory</a>
-            </div>
+        <section class="discover-intro" aria-labelledby="discover-heading">
+            <h2 id="discover-heading" class="page-title">Discover Abidjan's Hidden Gems</h2>
+            <p>From serene beaches to rich heritage sites, these places capture the beauty, culture, and energy of Côte
+                d’Ivoire.</p>
         </section>
+
+        <section id="visit-message" class="visit-message" aria-live="polite" role="status"></section>
+
+        <section class="discover-grid" data-discover-grid aria-label="Places of interest"></section>
     </main>
 
     <footer>
         <div class="footer-container">
             <div class="footer-info">
                 <h3>Abidjan Chamber of Commerce</h3>
-                <p>Plateau, Boulevard de la Republique, Abidjan</p>
+                <p>Plateau, Boulevard de la République, Abidjan</p>
                 <p>Phone: +225 27 20 21 54 87</p>
                 <p>Email: info@abidjanchamber.ci</p>
             </div>
             <div class="footer-meta">
-                <p>&copy; <span id="current-year"></span> Guei Tedy Yannick Morel | Cote d'Ivoire</p>
+                <p>&copy; <span id="current-year"></span> Guei Tedy Yannick Morel | Côte d’Ivoire</p>
                 <p>WDD 231 Chamber Project</p>
                 <p>Last Modified: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
-
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/thankyou.js" defer></script>
 </body>
 
 </html>

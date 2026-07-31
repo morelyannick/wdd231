@@ -23,37 +23,50 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css"> <!-- This seems to be a specific style for the home page -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
-        <div class="logo">
-            <h1>Abidjan Chamber</h1>
+        <div class="header-title-container">
+            <span class="profile-mark" aria-hidden="true">ACC</span>
+            <div>
+                <h1>Abidjan Chamber</h1>
+                <p>Of Commerce &amp; Industry</p>
+            </div>
         </div>
 
-        <!-- Hamburger button -->
+        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+
         <button id="hamburger" class="hamburger" type="button" aria-label="Open navigation" aria-controls="main-nav"
             aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
-        <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
-            <ul>
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="../discover.html">Discover</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main id="main-content">
@@ -65,7 +78,7 @@
 
         <!-- HERO -->
         <section class="hero">
-            <img src="images/abidjan_belle.webp" alt="Business district of Abidjan, Côte d'Ivoire" width="1920"
+            <img src="../images/abidjan_belle.webp" alt="Business district of Abidjan, Côte d'Ivoire" width="1920"
                 height="1080">
             <div class="hero-content">
                 <h2>Grow Your Business With Us</h2>
@@ -146,20 +159,27 @@
             <h2 class="section-title">Stay Informed</h2>
             <form>
                 <label for="newsletter-email">Your email address</label>
-                <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required>
+                <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>© <span id="current-year"></span> Abidjan Chamber of Commerce</p>
-        <p>Yannick Guei | WDD231 Project</p>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Abidjan Chamber of Commerce</h3>
+                <p>📍 Plateau, Boulevard de la République, Abidjan</p>
+                <p>📞 Phone: +225 27 20 21 54 87</p>
+                <p>✉️ Email: info@abidjanchamber.ci</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="current-year"></span> Guei Tedy Yannick Morel | Côte d'Ivoire</p>
+                <p>WDD 231 Chamber Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
     </footer>
-
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
 
 </body>
 

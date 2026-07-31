@@ -3,6 +3,7 @@
    ========================================================================== */
 
 @media (min-width: 768px) {
+
     /* Header & Logo */
     header {
         padding: 1.5rem 3rem;
@@ -148,10 +149,24 @@
 }
 
 @media (min-width: 1024px) {
+
     /* 3 Columns on Large Screens */
     .members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+
+    .discover-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    .discover-figure img:hover {
+        transform: scale(1.04);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+        filter: contrast(1.05) saturate(1.15);
     }
 }
 
@@ -210,5 +225,20 @@
     .main-nav {
         flex-basis: auto;
         order: 0;
+    }
+}
+
+/* Home page – large screen spotlight grid (3 columns on desktop) */
+@media (min-width: 1024px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 }
