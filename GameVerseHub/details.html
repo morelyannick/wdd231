@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Details | GameVerse Hub</title>
+
+  <meta name="description" content="Detailed information about your favorite games including screenshots, ratings, platforms, and more.">
+  <meta name="author" content="GameVerse Hub Team">
+  <meta name="keywords" content="game details, game info, screenshots, rating, platforms">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Game Details | GameVerse Hub">
+  <meta property="og:description" content="Full game details, screenshots, and ratings.">
+  <meta property="og:image" content="images/hero.svg">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/details.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html">Home</a>
+        <a href="library.html">Library</a>
+        <a href="top10.html">Top 10</a>
+        <a href="details.html?id=1" class="active" aria-current="page">Details</a>
+        <a href="suggestions.html">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="details-content">
+      <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading game details...</p></div>
+    </div>
+  </main>
+
+  <footer></footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You! | GameVerse Hub</title>
+
+  <meta name="description" content="Thank you for your suggestion. It has been submitted successfully.">
+  <meta name="author" content="GameVerse Hub Team">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thank You! | GameVerse Hub">
+  <meta property="og:description" content="Your suggestion has been submitted.">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/thankyou.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html">Home</a>
+        <a href="library.html">Library</a>
+        <a href="top10.html">Top 10</a>
+        <a href="details.html?id=1">Details</a>
+        <a href="suggestions.html">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main" class="thankyou-page">
+    <div class="thankyou-card">
+      <div class="thankyou-icon" aria-hidden="true">✓</div>
+      <h1>Thank You!</h1>
+      <p id="thankyou-message">Your game suggestion has been submitted successfully. Our team will review it soon.</p>
+      <p style="color:var(--color-text-muted); font-size:0.9rem;">We'll notify you by email if your suggestion is added to the library.</p>
+      <div style="display:flex; gap:var(--spacing-md); justify-content:center; margin-top:var(--spacing-lg); flex-wrap:wrap;">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="library.html" class="btn btn-secondary">Browse Library</a>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Games | GameVerse Hub</title>
+
+  <meta name="description" content="Check out the top 10 highest-rated games on GameVerse Hub, with rating comparisons and details.">
+  <meta name="author" content="GameVerse Hub Team">
+  <meta name="keywords" content="top 10 games, best games, rankings, game ratings">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Top 10 Games | GameVerse Hub">
+  <meta property="og:description" content="The top 10 highest-rated games with rating comparisons.">
+  <meta property="og:image" content="images/hero.svg">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/top10.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html">Home</a>
+        <a href="library.html">Library</a>
+        <a href="top10.html" class="active" aria-current="page">Top 10</a>
+        <a href="details.html?id=1">Details</a>
+        <a href="suggestions.html">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="top10-title">
+      <div class="container">
+        <h1 class="section-title" id="top10-title">Top 10 Games</h1>
+        <p class="text-center text-muted" id="avg-rating" style="margin-bottom:var(--spacing-lg);">Ranked by community rating.</p>
+        <div class="top10-list" id="top10-list">
+          <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading rankings...</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
+

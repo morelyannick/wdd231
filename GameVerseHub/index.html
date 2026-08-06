@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVerse Hub | Video Game Reviews &amp; Recommendations</title>
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="GameVerse Hub is your ultimate gaming companion. Discover game reviews, ratings, rankings, and personalized recommendations.">
+  <meta name="author" content="GameVerse Hub Team">
+  <meta name="keywords" content="video games, reviews, ratings, recommendations, game library, top 10, wishlist">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GameVerse Hub | Video Game Reviews &amp; Recommendations">
+  <meta property="og:description" content="Discover the best video games with reviews, ratings, and rankings.">
+  <meta property="og:image" content="images/hero.svg">
+  <meta property="og:url" content="index.html">
+  <meta property="og:site_name" content="GameVerse Hub">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GameVerse Hub | Video Game Reviews &amp; Recommendations">
+  <meta name="twitter:description" content="Discover the best video games with reviews, ratings, and rankings.">
+  <meta name="twitter:image" content="images/hero.svg">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/main.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="library.html">Library</a>
+        <a href="top10.html">Top 10</a>
+        <a href="details.html?id=1">Details</a>
+        <a href="suggestions.html">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <span class="hero-badge">GAME OF THE MONTH</span>
+        <h1 class="hero-title" id="hero-title">Loading...</h1>
+        <p class="hero-desc">Loading the featured game...</p>
+        <div class="hero-actions">
+          <a href="details.html?id=1" class="btn btn-primary hero-link">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Releases -->
+    <section class="section" aria-labelledby="latest-title">
+      <div class="container">
+        <h2 class="section-title" id="latest-title">Latest Releases</h2>
+        <div class="cards-grid" id="latest-releases">
+          <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading games...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Reviews -->
+    <section class="section" style="background: var(--color-bg-alt);" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 class="section-title" id="reviews-title">Featured Reviews</h2>
+        <div class="reviews-list" id="featured-reviews">
+          <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading reviews...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Games -->
+    <section class="section" aria-labelledby="top-title">
+      <div class="container">
+        <h2 class="section-title" id="top-title">Top Games</h2>
+        <div class="top-games-list" id="top-games">
+          <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading top games...</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer is rendered by renderFooter() -->
+  <footer></footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggestions &amp; Wishlist | GameVerse Hub</title>
+
+  <meta name="description" content="Submit a game suggestion to the GameVerse Hub team and manage your personal wishlist.">
+  <meta name="author" content="GameVerse Hub Team">
+  <meta name="keywords" content="game suggestions, wishlist, recommend a game">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suggestions &amp; Wishlist | GameVerse Hub">
+  <meta property="og:description" content="Submit game suggestions and manage your wishlist.">
+  <meta property="og:image" content="images/hero.svg">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/suggestions.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html">Home</a>
+        <a href="library.html">Library</a>
+        <a href="top10.html">Top 10</a>
+        <a href="details.html?id=1">Details</a>
+        <a href="suggestions.html" class="active" aria-current="page">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="suggest-title">
+      <div class="container">
+        <h1 class="section-title" id="suggest-title">Suggestions &amp; Wishlist</h1>
+        <p class="text-center text-muted" style="margin-bottom:var(--spacing-lg);">
+          Found a game we're missing? Let us know! Also manage your personal wishlist below.
+        </p>
+
+        <div class="form-section">
+          <!-- Suggestion Form -->
+          <div class="form-card">
+            <h2>Suggest a Game</h2>
+            <form id="suggestion-form" novalidate>
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required minlength="2" autocomplete="name">
+                <span class="error-msg">Please enter your name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="e.g. alex@example.com" required autocomplete="email">
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="game-name">Game Title</label>
+                <input type="text" id="game-name" name="game-name" placeholder="e.g. Starfield" required minlength="2">
+                <span class="error-msg">Please enter the game title.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="genre">Genre</label>
+                <select id="genre" name="genre" required>
+                  <option value="">Select a genre...</option>
+                  <option value="Action">Action</option>
+                  <option value="Adventure">Adventure</option>
+                  <option value="Action RPG">Action RPG</option>
+                  <option value="RPG">RPG</option>
+                  <option value="Simulation">Simulation</option>
+                  <option value="Strategy">Strategy</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Racing">Racing</option>
+                  <option value="Puzzle">Puzzle</option>
+                  <option value="Indie">Indie</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg">Please select a genre.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="rating">Expected Rating (1-10)</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" step="0.1" placeholder="e.g. 8.5" required>
+                <span class="error-msg">Please enter a rating between 1 and 10.</span>
+              </div>
+
+              <div class="form-group">
+                <label>Why should we add it?</label>
+                <div class="form-radio-group">
+                  <label><input type="radio" name="reason" value="highly-rated" checked> Highly Rated</label>
+                  <label><input type="radio" name="reason" value="underrated"> Underrated Gem</label>
+                  <label><input type="radio" name="reason" value="community-favorite"> Community Favorite</label>
+                  <label><input type="radio" name="reason" value="personal"> Personal Pick</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" placeholder="Tell us more about the game..." required minlength="10"></textarea>
+                <span class="error-msg">Please share at least 10 characters of detail.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit Suggestion</button>
+            </form>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="wishlist-section" id="wishlist">
+            <div class="wishlist-header">
+              <h2>Your Wishlist</h2>
+              <span class="wishlist-count" id="wishlist-count">0 items</span>
+            </div>
+            <button class="btn btn-secondary btn-small" id="clear-wishlist" type="button" style="display:none; margin-bottom:var(--spacing-md);">
+              Clear Wishlist
+            </button>
+            <div id="wishlist-items"></div>
+            <div class="wishlist-empty" id="wishlist-empty">
+              <p style="font-size:2rem; margin-bottom:var(--spacing-sm);">🎮</p>
+              <p>Your wishlist is empty. Browse the <a href="library.html">library</a> and add games you want to play!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Library | GameVerse Hub</title>
+
+  <meta name="description" content="Browse the complete GameVerse Hub library. Search and filter games by genre, platform, and rating.">
+  <meta name="author" content="GameVerse Hub Team">
+  <meta name="keywords" content="game library, search games, genre filter, platform, rating">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Game Library | GameVerse Hub">
+  <meta property="og:description" content="Browse and filter the complete GameVerse Hub game library.">
+  <meta property="og:image" content="images/hero.svg">
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/library.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="GameVerse Hub home">
+        <img src="images/logo.svg" alt="GameVerse Hub logo" width="220" height="60">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="nav-menu" id="primary-menu">
+        <a href="index.html">Home</a>
+        <a href="library.html" class="active" aria-current="page">Library</a>
+        <a href="top10.html">Top 10</a>
+        <a href="details.html?id=1">Details</a>
+        <a href="suggestions.html">Wishlist</a>
+      </div>
+      <form class="nav-search" id="nav-search" role="search" action="library.html" method="get">
+        <label class="visually-hidden" for="nav-search-input">Search games</label>
+        <input type="search" id="nav-search-input" name="q" placeholder="Search games..." aria-label="Search games">
+        <button type="submit">Go</button>
+      </form>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="library-title">
+      <div class="container">
+        <h1 class="section-title" id="library-title">Game Library</h1>
+        <p class="text-center text-muted" style="margin-bottom:var(--spacing-lg);">
+          Browse all games. Use the filters to narrow your search.
+        </p>
+
+        <!-- Filter Panel -->
+        <div class="filter-panel">
+          <div class="filter-row">
+            <div class="filter-group">
+              <label for="search-input">Search</label>
+              <input type="search" id="search-input" placeholder="Search by title, genre, or developer...">
+            </div>
+            <div class="filter-group">
+              <label for="genre-filter">Genre</label>
+              <select id="genre-filter">
+                <option value="all">All Genres</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="platform-filter">Platform</label>
+              <select id="platform-filter">
+                <option value="all">All Platforms</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="rating-filter">Min Rating</label>
+              <select id="rating-filter">
+                <option value="0">Any</option>
+                <option value="8">8.0+</option>
+                <option value="8.5">8.5+</option>
+                <option value="9">9.0+</option>
+                <option value="9.5">9.5+</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="sort-select">Sort By</label>
+              <select id="sort-select">
+                <option value="title">Title (A-Z)</option>
+                <option value="rating-desc">Rating (High-Low)</option>
+                <option value="rating-asc">Rating (Low-High)</option>
+                <option value="newest">Release (Newest)</option>
+                <option value="oldest">Release (Oldest)</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" id="reset-filters" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="results-info" id="results-info">Loading...</div>
+        <div class="cards-grid" id="library-grid">
+          <div class="loading-indicator"><div class="spinner" aria-hidden="true"></div><p>Loading library...</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
+
