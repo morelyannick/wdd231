@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #1d4ed8;
+    --secondary-color: #2563eb;
+    --accent-color: #f59e0b;
+    --background-color: #f8fafc;
+    --card-color: #ffffff;
+    --text-color: #1e293b;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,
+            #dbeafe,
+            #eff6ff,
+            #ffffff);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 1rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    width: min(90%, 600px);
+    margin: auto;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#current-temp {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+figure {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+}
+
+#weather-icon {
+    width: 140px;
+    height: 140px;
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main p {
+        font-size: 1.4rem;
+    }
+
+    #current-temp {
+        font-size: 1.8rem;
+    }
+
+    #weather-icon {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1024px) {
+    main {
+        max-width: 700px;
+    }
+
+    figure {
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

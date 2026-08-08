@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Orange Côte d'Ivoire",
+        "address": "Plateau, Boulevard de la République, Abidjan, Côte d'Ivoire",
+        "phone": "+225 07 07 07 07 07",
+        "website": "https://www.orange.ci",
+        "image": "../images/orange.png",
+        "membershipLevel": 3,
+        "category": "Telecommunications",
+        "description": "Leading telecommunications and mobile money services provider in West Africa."
+    },
+    {
+        "name": "MTN Côte d'Ivoire",
+        "address": "Plateau, Boulevard de Marseille, Abidjan, Côte d'Ivoire",
+        "phone": "+225 01 00 10 10 10",
+        "website": "https://www.mtn.ci",
+        "image": "../images/mtn.png",
+        "membershipLevel": 3,
+        "category": "Telecommunications",
+        "description": "Provider of high-speed internet, mobile cellular, and digital solutions."
+    },
+    {
+        "name": "Société Générale Côte d'Ivoire",
+        "address": "Plateau, Avenue Joseph Anoma, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 20 20 12 34",
+        "website": "https://www.societegenerale.ci",
+        "image": "../images/sg_logo.png",
+        "membershipLevel": 2,
+        "category": "Finance & Banking",
+        "description": "Premier international banking institution serving corporate and individual clients."
+    },
+    {
+        "name": "Sofitel Abidjan Hôtel Ivoire",
+        "address": "Cocody, Boulevard Hassan II, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 22 48 26 26",
+        "website": "https://sofitel.accor.com",
+        "image": "../images/sofitel.jpg",
+        "membershipLevel": 3,
+        "category": "Hospitality",
+        "description": "Five-star luxury hotel featuring lagoon views, fine dining, and convention center."
+    },
+    {
+        "name": "Port Autonome d'Abidjan",
+        "address": "Treichville, Boulevard de Vridi, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 21 23 80 00",
+        "website": "https://www.portabidjan.ci",
+        "image": "../images/port_autonome_logo.jpg",
+        "membershipLevel": 2,
+        "category": "Logistics & Shipping",
+        "description": "The largest container port in the West African sub-region, driving national economy."
+    },
+    {
+        "name": "CIE (Compagnie Ivoirienne d'Electricité)",
+        "address": "Treichville, Boulevard Valéry Giscard d'Estaing, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 21 21 00 00",
+        "website": "https://www.cie.ci",
+        "image": "../images/cie.png",
+        "membershipLevel": 1,
+        "category": "Utilities",
+        "description": "National operator responsible for the distribution and transmission of electricity."
+    },
+    {
+        "name": "SOTRA côte d'ivoire",
+        "address": "Plateau, Boulevard de la République, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://www.sotra.ci",
+        "image": "../images/sotra.png",
+        "membershipLevel": 2,
+        "category": "Transportation",
+        "description": "Public transportation company providing bus services across Abidjan and surrounding areas."
+    },
+    {
+        "name": "Air Côte d'Ivoire",
+        "address": "Plateau, Boulevard de la République, Abidjan, Côte d'Ivoire",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://www.aircotedivoire.com",
+        "image": "../images/air_logo.png",
+        "membershipLevel": 2,
+        "category": "Aviation",
+        "description": "National airline of Côte d'Ivoire, providing domestic and international flights."
+    },
+    {
+        "name": "Pullman Hotel Abidjan",
+        "address": "plateau, Rue Abdoulaye Fadiga, 01 BP 2185",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://www.pullmanhotels.com",
+        "image": "../images/pullman.png",
+        "membershipLevel": 2,
+        "category": "Hospitality",
+        "description": "Luxury hotel in Abidjan, offering modern amenities and exceptional service."
+    },
+    {
+        "name": "Novotel Abidjan Centre",
+        "address": "plateau, Rue Abdoulaye Fadiga, 01 BP 2185",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://novotel.accor.com",
+        "image": "../images/novotels.png",
+        "membershipLevel": 2,
+        "category": "Hospitality",
+        "description": "Luxury hotel in Abidjan, offering modern amenities and exceptional service."
+    },
+    {
+        "name": "Radisson Blu Hotel, Abidjan Airport",
+        "address": "plateau, Rue Abdoulaye Fadiga, 01 BP 2185",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://www.radissonblu.com",
+        "image": "../images/radisson.jpg",
+        "membershipLevel": 2,
+        "category": "Hospitality",
+        "description": "Luxury hotel in Abidjan, offering modern amenities and exceptional service."
+    },
+    {
+        "name": "University of Grand-Bassam",
+        "address": "plateau, Rue Abdoulaye Fadiga, 01 BP 2185",
+        "phone": "+225 27 20 20 20 20",
+        "website": "https://iugb.edu.ci/",
+        "image": "../images/university_of_grand_bassam.jpg",
+        "membershipLevel": 2,
+        "category": "Education",
+        "description": "University in Grand-Bassam, offering modern amenities and exceptional service."
+    }
+]
